@@ -1,0 +1,16 @@
+
+s
+java:S1192"XDefine a constant instead of duplicating this literal "should never reach here" 3 times.(ÎĞïúÿÿÿÿ
+E
+java:S1066"/Merge this if statement with the enclosing one.(Šõ¦Ï
+ 
+java:S1862""„This branch can not be reached because the condition duplicates a previous condition in the same sequence of "if/else if" statements(Ö²ı™ûÿÿÿÿ
+›
+java:S1862("„This branch can not be reached because the condition duplicates a previous condition in the same sequence of "if/else if" statements(úïÚ
+T
+java:S1854H"9Remove this useless assignment to local variable "state".(«ó§Şùÿÿÿÿ
+E
+java:S1197C"*Move the array designators [] to the type.(¡şÏÖøÿÿÿÿ
+E
+java:S1481H"*Remove this unused "state" local variable.(«ó§Şùÿÿÿÿ
+S	java:S106I"9Replace this use of System.out or System.err by a logger.(¿©¨ˆÿÿÿÿÿ

@@ -1,0 +1,29 @@
+
+s
+java:S1192!"XDefine a constant instead of duplicating this literal "should never reach here" 4 times.(ÎĞïúÿÿÿÿ
+J
+java:S1191"5Use classes from the Java API instead of Sun classes.(–ƒÚH
+c	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(š¯æ„
+Q
+java:S1854"<Remove this useless assignment to local variable "intUndef".(˜ìĞ[
+B
+java:S1481"-Remove this unused "intUndef" local variable.(˜ìĞ[
+c	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(©¡“é
+c	java:S100$"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(û©Û”
+>
+java:S1172$"(Remove this unused method parameter "s".(û©Û”
+c	java:S100("NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘ğ£¯
+h	java:S100,"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‡ñÎöùÿÿÿÿ
+h	java:S1002"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(âíşışÿÿÿÿ
+c	java:S1009"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(óæØà
+h	java:S100b"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(µÑĞÒùÿÿÿÿ
+U
+java:S1854€"9Remove this useless assignment to local variable "state".(¤ı˜ øÿÿÿÿ
+E
+java:S1197s"*Move the array designators [] to the type.(¡şÏÖøÿÿÿÿ
+N	java:S106w"9Replace this use of System.out or System.err by a logger.(ÌîÂ
+S	java:S106x"9Replace this use of System.out or System.err by a logger.(Şëöèıÿÿÿÿ
+N	java:S106}"9Replace this use of System.out or System.err by a logger.(Ô¬§ı
+F
+java:S1481€"*Remove this unused "state" local variable.(¤ı˜ øÿÿÿÿ
+T	java:S106"9Replace this use of System.out or System.err by a logger.(¿©¨ˆÿÿÿÿÿ

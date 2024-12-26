@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$/Algorithm_Record" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/ECONOVATION_IDP" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/KafkaProj-01" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/KafkaProj01" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/WebRTC-SS" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/auth-server" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/camp2022_gugu" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/camp2022_gugu/src/server" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/econo-recruit" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/gugu" vcs="Git" />
+  </component>
+</project>

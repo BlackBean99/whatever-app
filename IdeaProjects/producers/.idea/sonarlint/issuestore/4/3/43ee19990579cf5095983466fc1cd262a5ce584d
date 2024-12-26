@@ -1,0 +1,35 @@
+
+e
+java:S6208m"CMerge the previous cases into this one using comma-separated label.(ú¬Ğ¿üÿÿÿÿ8ığàô0
+:
+java:S1643ÿ"Use a StringBuilder instead.(ÊÅŠ½8ığàô0
+s	java:S116"RRename this field "LETTERS" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(°şŸ²şÿÿÿÿ8åñàô0
+r	java:S116"QRename this field "DIGITS" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¶ÑÊ¼ùÿÿÿÿ8åñàô0
+o	java:S116""NRename this field "EOL" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(˜®Öøÿÿÿÿ8åñàô0
+o	java:S116""NRename this field "EOF" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(˜®Öøÿÿÿÿ8åñàô0
+C
+java:S1170"!Make this final field static too.(°şŸ²şÿÿÿÿ8åñàô0
+C
+java:S1170"!Make this final field static too.(¶ÑÊ¼ùÿÿÿÿ8åñàô0
+C
+java:S1170""!Make this final field static too.(˜®Öøÿÿÿÿ8åñàô0
+C
+java:S1170""!Make this final field static too.(˜®Öøÿÿÿÿ8åñàô0
+F
+java:S1659"$Declare "DIGITS" on a separate line.(¶ÑÊ¼ùÿÿÿÿ8æñàô0
+C
+java:S1659""!Declare "EOF" on a separate line.(˜®Öøÿÿÿÿ8æñàô0
+T	java:S106+"9Replace this use of System.out or System.err by a logger.(ğİÇ*8ü›àô0
+Z	java:S106;"9Replace this use of System.out or System.err by a logger.(Şàš¬øÿÿÿÿ8éñàô0
+]	java:S125A"<This block of commented-out lines of code should be removed.(‚­¶üıÿÿÿÿ8éñàô0
+t
+java:S3776M"RRefactor this method to reduce its Cognitive Complexity from 20 to the 15 allowed.(°Ñ”Åÿÿÿÿÿ8éñàô0
+b
+java:S1134°"DTake the required action to fix the issue indicated by this comment.(ÁÆğ—8ìñàô0
+V	java:S106Š"9Replace this use of System.out or System.err by a logger.(òÉÜ³8îñàô0
+[	java:S106‹"9Replace this use of System.out or System.err by a logger.(şâ„âÿÿÿÿÿ8îñàô0
+[	java:S106Œ"9Replace this use of System.out or System.err by a logger.(Ğ®ãõûÿÿÿÿ8îñàô0
+[	java:S106"9Replace this use of System.out or System.err by a logger.(ºÒ‡üÿÿÿÿ8îñàô0
+c
+java:S1124Ÿ"EReorder the modifiers to comply with the Java Language Specification.(ĞÄ’™8ü›àô0
+V	java:S106£"9Replace this use of System.out or System.err by a logger.(µ‰Æô8ïñàô0

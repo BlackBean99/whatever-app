@@ -1,0 +1,22 @@
+
+s
+java:S1192A"XDefine a constant instead of duplicating this literal "should never reach here" 4 times.(ÎĞïúÿÿÿÿ
+p
+java:S1192r"ZDefine a constant instead of duplicating this literal "mixed mode assignment to " 3 times.(½šñ¬
+S	java:S106"9Replace this use of System.out or System.err by a logger.(…È¿’ÿÿÿÿÿ
+h	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¹Ş¦Èıÿÿÿÿ
+h	java:S100$"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(å¾›¦øÿÿÿÿ
+m
+java:S3776)"RRefactor this method to reduce its Cognitive Complexity from 19 to the 15 allowed.(¯øóúÿÿÿÿ
+G
+java:S52615"1Add explicit curly braces to avoid dangling else.(É¢Õ­
+c	java:S100D"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÔûŸ²
+c	java:S100d"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Éˆª·
+N
+java:S1854†"7Remove this useless assignment to local variable "map".(¨Ûô 
+F
+java:S1197€"*Move the array designators [] to the type.(¡şÏÖøÿÿÿÿ
+O	java:S106„"9Replace this use of System.out or System.err by a logger.(ÌîÂ
+T	java:S106…"9Replace this use of System.out or System.err by a logger.(Şëöèıÿÿÿÿ
+?
+java:S1481†"(Remove this unused "map" local variable.(¨Ûô 

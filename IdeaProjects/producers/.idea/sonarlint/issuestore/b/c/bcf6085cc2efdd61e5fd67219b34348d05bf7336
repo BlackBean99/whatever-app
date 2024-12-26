@@ -1,0 +1,23 @@
+
+s
+java:S1192"XDefine a constant instead of duplicating this literal "should never reach here" 3 times.(ÎĞïúÿÿÿÿ
+J
+java:S10663"/Merge this if statement with the enclosing one.(ÃÔ£úÿÿÿÿ
+h	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÍÅüÁşÿÿÿÿ
+c	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÇˆÙÁ
+M
+java:S1854"8Remove this useless assignment to local variable "typ2".(´Şa
+>
+java:S1481")Remove this unused "typ2" local variable.(´Şa
+h	java:S100$"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(µú‡ˆøÿÿÿÿ
+m
+java:S3776$"RRefactor this method to reduce its Cognitive Complexity from 16 to the 15 allowed.(µú‡ˆøÿÿÿÿ
+R
+java:S1854]"7Remove this useless assignment to local variable "out".(œü«”ùÿÿÿÿ
+E
+java:S1197T"*Move the array designators [] to the type.(¡şÏÖøÿÿÿÿ
+N	java:S106X"9Replace this use of System.out or System.err by a logger.(ÌîÂ
+S	java:S106Y"9Replace this use of System.out or System.err by a logger.(Şëöèıÿÿÿÿ
+C
+java:S1481]"(Remove this unused "out" local variable.(œü«”ùÿÿÿÿ
+N	java:S106^"9Replace this use of System.out or System.err by a logger.(Ô¬§ı

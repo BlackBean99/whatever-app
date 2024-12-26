@@ -1,0 +1,30 @@
+
+t
+java:S2293f"YReplace the type specification in this constructor call with the diamond operator ("<>").(Á¼úôøÿÿÿÿ
+€
+java:S1319;"eThe type of "pMessage" should be an interface such as "Map" rather than the implementation "HashMap".(àØ–¶ýÿÿÿÿ
+R
+java:S2629'"7Use the built-in formatting to construct this argument.(ï­š„þÿÿÿÿ
+R
+java:S26291"7Use the built-in formatting to construct this argument.(š•¨Ìûÿÿÿÿ
+r
+java:S2629K"\Invoke method(s) only conditionally. Use the built-in formatting to construct this argument.(ýÌ«Ò
+t
+java:S2142*"^Either re-interrupt this method or rethrow the "InterruptedException" that can be caught here.(ä ¹€
+\
+java:S3457'"AFormat specifiers should be used instead of string concatenation.(ï­š„þÿÿÿÿ
+t
+java:S21423"^Either re-interrupt this method or rethrow the "InterruptedException" that can be caught here.(ä ¹€
+\
+java:S34571"AFormat specifiers should be used instead of string concatenation.(š•¨Ìûÿÿÿÿ
+V
+java:S3457@"AFormat specifiers should be used instead of string concatenation.(åÛµ
+V
+java:S3457E"AFormat specifiers should be used instead of string concatenation.(Ž¼æ>
+_
+java:S2147Q"DCombine this catch with the one at line 79, which has the same body.(åþŒóùÿÿÿÿ
+t
+java:S2142O"^Either re-interrupt this method or rethrow the "InterruptedException" that can be caught here.(ä ¹€
+W
+java:S3457K"AFormat specifiers should be used instead of string concatenation.(ýÌ«Ò
+Q	java:S125a"<This block of commented-out lines of code should be removed.(ÞýþÅ

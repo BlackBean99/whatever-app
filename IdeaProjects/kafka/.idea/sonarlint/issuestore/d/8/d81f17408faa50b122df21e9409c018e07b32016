@@ -1,0 +1,13 @@
+
+f
+java:S2095$"KUse try-with-resources or close this "KafkaConsumer" in a "finally" clause.(£å¾¯ùÿÿÿÿ
+G
+java:S3416"1Update this logger to use "SimpleConsumer.class".(šÁ˜§
+\
+java:S1854$"ARemove this useless assignment to local variable "kafkaConsumer".(£å¾¯ùÿÿÿÿ
+X
+java:S1854"=Remove this useless assignment to local variable "topicName".(Æ©ä­ýÿÿÿÿ
+I
+java:S1481".Remove this unused "topicName" local variable.(Æ©ä­ýÿÿÿÿ
+M
+java:S1481$"2Remove this unused "kafkaConsumer" local variable.(£å¾¯ùÿÿÿÿ

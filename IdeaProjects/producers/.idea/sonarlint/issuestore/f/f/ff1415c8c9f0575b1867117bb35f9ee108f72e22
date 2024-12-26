@@ -1,0 +1,197 @@
+
+o
+java:S2293@"YReplace the type specification in this constructor call with the diamond operator ("<>").(ªÍÒô
+a
+java:S1192-"FDefine a constant instead of duplicating this literal "undef" 5 times.(˜§‘÷øÿÿÿÿ
+t
+java:S1192‹"XDefine a constant instead of duplicating this literal "should never reach here" 5 times.(»óŸàşÿÿÿÿ
+a
+java:S1192*"KUse already-defined constant 'FLOAT' instead of duplicating its value here.(øà¾Ô
+}
+java:S1319@"gThe type of "members" should be an interface such as "List" rather than the implementation "ArrayList".(ªÍÒô
+i
+java:S1104@"SMake members a static final constant or non-public and provide accessors if needed.(ªÍÒô
+W
+java:S2259|"AA "NullPointerException" could be thrown; "obj" is nullable here.(ÚÚ„
+P
+java:S6213":Rename this variable to not match a restricted identifier.(ğÿÉ×
+`
+java:S1124'"EReorder the modifiers to comply with the Java Language Specification.(ËêæÚùÿÿÿÿ
+`
+java:S1124("EReorder the modifiers to comply with the Java Language Specification.(Ç¥ìûÿÿÿÿ
+[
+java:S1124)"EReorder the modifiers to comply with the Java Language Specification.(à€Êˆ
+[
+java:S1124*"EReorder the modifiers to comply with the Java Language Specification.(øà¾Ô
+`
+java:S1124-"EReorder the modifiers to comply with the Java Language Specification.(˜§‘÷øÿÿÿÿ
+O
+java:S16106"9Convert the abstract class "Statement" into an interface.(Õ©¨Ú
+X
+java:S20946"BRemove this empty class, write its code or make it an "interface".(Õ©¨Ú
+œ
+java:S1186B"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ª×Ñâıÿÿÿÿ
+>
+java:S1659V"(Declare "elsebranch" on a separate line.(ô˜êÃ
+P
+java:S1610n":Convert the abstract class "Expression" into an interface.(Õ…ê
+X
+java:S2094n"BRemove this empty class, write its code or make it an "interface".(Õ…ê
+5
+java:S2097{"Add a type test to this method.(ÜÑã
+Q
+java:S1161²":Add the "@Override" annotation above this method signature(ÕãªÀ
+V
+java:S1161Å":Add the "@Override" annotation above this method signature(ËŸ¨öùÿÿÿÿ
+Q
+java:S1161Ê":Add the "@Override" annotation above this method signature(ÕãªÀ
+V
+java:S1161İ":Add the "@Override" annotation above this method signature(â¾‘Ñûÿÿÿÿ
+V
+java:S1161ğ":Add the "@Override" annotation above this method signature(Ç·Ô×şÿÿÿÿ
+?
+java:S1659ÿ"#Declare "term2" on a separate line.(†÷ó¸ùÿÿÿÿ
+l
+java:S1206à"PThis class overrides "equals()" and should therefore also override "hashCode()".(İ§Êçøÿÿÿÿ
+a
+java:S1124•"EReorder the modifiers to comply with the Java Language Specification.(¦øşşøÿÿÿÿ
+W	java:S125”"<This block of commented-out lines of code should be removed.(ìÙç‡üÿÿÿÿ
+a
+java:S1124–"EReorder the modifiers to comply with the Java Language Specification.(°¬€¡ûÿÿÿÿ
+\
+java:S1124˜"EReorder the modifiers to comply with the Java Language Specification.(èçúÒ
+\
+java:S1124™"EReorder the modifiers to comply with the Java Language Specification.(‹»Æ‘
+a
+java:S1124š"EReorder the modifiers to comply with the Java Language Specification.(—ÉÆıÿÿÿÿ
+\
+java:S1124›"EReorder the modifiers to comply with the Java Language Specification.(Áï¤è
+a
+java:S1124œ"EReorder the modifiers to comply with the Java Language Specification.(Òó…Ëûÿÿÿÿ
+a
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.(ƒéê‡üÿÿÿÿ
+\
+java:S1124Ÿ"EReorder the modifiers to comply with the Java Language Specification.(Õ‹Ò
+\
+java:S1124 "EReorder the modifiers to comply with the Java Language Specification.(Öÿ‡Ó
+a
+java:S1124¡"EReorder the modifiers to comply with the Java Language Specification.(Š©ßÿÿÿÿÿ
+a
+java:S1124¢"EReorder the modifiers to comply with the Java Language Specification.(‰â·‘øÿÿÿÿ
+a
+java:S1124¤"EReorder the modifiers to comply with the Java Language Specification.( é¬æıÿÿÿÿ
+a
+java:S1124¥"EReorder the modifiers to comply with the Java Language Specification.(æ‹çøÿÿÿÿ
+a
+java:S1124§"EReorder the modifiers to comply with the Java Language Specification.(À–Ô‰ıÿÿÿÿ
+\
+java:S1124¨"EReorder the modifiers to comply with the Java Language Specification.(Åşà«
+a
+java:S1124©"EReorder the modifiers to comply with the Java Language Specification.(Âæ³üÿÿÿÿ
+\
+java:S1124¬"EReorder the modifiers to comply with the Java Language Specification.(¹ Òõ
+\
+java:S1124­"EReorder the modifiers to comply with the Java Language Specification.(Ùìˆï
+a
+java:S1124®"EReorder the modifiers to comply with the Java Language Specification.(§ô¶†úÿÿÿÿ
+a
+java:S1124¯"EReorder the modifiers to comply with the Java Language Specification.(î¾şóûÿÿÿÿ
+\
+java:S1124°"EReorder the modifiers to comply with the Java Language Specification.(ŸÙÅ
+a
+java:S1124±"EReorder the modifiers to comply with the Java Language Specification.(ÒûÓÆùÿÿÿÿ
+\
+java:S1124³"EReorder the modifiers to comply with the Java Language Specification.(‡èÁª
+a
+java:S1124´"EReorder the modifiers to comply with the Java Language Specification.(›§§çøÿÿÿÿ
+a
+java:S1124µ"EReorder the modifiers to comply with the Java Language Specification.(ØåÜäıÿÿÿÿ
+a
+java:S1124¶"EReorder the modifiers to comply with the Java Language Specification.(•ã‘øÿÿÿÿ
+a
+java:S1124¸"EReorder the modifiers to comply with the Java Language Specification.(ÚÎÔîÿÿÿÿÿ
+a
+java:S1124º"EReorder the modifiers to comply with the Java Language Specification.(£ñÿüıÿÿÿÿ
+\
+java:S1124»"EReorder the modifiers to comply with the Java Language Specification.(–º•Ğ
+a
+java:S1124¼"EReorder the modifiers to comply with the Java Language Specification.(ê®Áæıÿÿÿÿ
+a
+java:S1124½"EReorder the modifiers to comply with the Java Language Specification.(£ç¾¡ÿÿÿÿÿ
+\
+java:S1124¾"EReorder the modifiers to comply with the Java Language Specification.(Ù€ù
+\
+java:S1124¿"EReorder the modifiers to comply with the Java Language Specification.(ËÆº¾
+\
+java:S1124Á"EReorder the modifiers to comply with the Java Language Specification.(šÛæ·
+\
+java:S1124Â"EReorder the modifiers to comply with the Java Language Specification.( ®­¨
+a
+java:S1124Ã"EReorder the modifiers to comply with the Java Language Specification.(ÚÛµûÿÿÿÿ
+a
+java:S1124Ä"EReorder the modifiers to comply with the Java Language Specification.(«šËØüÿÿÿÿ
+a
+java:S1124Æ"EReorder the modifiers to comply with the Java Language Specification.(ıŒ›“şÿÿÿÿ
+\
+java:S1124È"EReorder the modifiers to comply with the Java Language Specification.(·¶œ‰
+\
+java:S1124É"EReorder the modifiers to comply with the Java Language Specification.(ø‡¯Ñ
+\
+java:S1124Ê"EReorder the modifiers to comply with the Java Language Specification.(Ş¬ÛÉ
+\
+java:S1124Ë"EReorder the modifiers to comply with the Java Language Specification.(ÔÖ‚
+\
+java:S1124Ì"EReorder the modifiers to comply with the Java Language Specification.(­àÏ‘
+a
+java:S1124Í"EReorder the modifiers to comply with the Java Language Specification.(’ĞÁıÿÿÿÿ
+a
+java:S1124Ï"EReorder the modifiers to comply with the Java Language Specification.(ù“ÿîıÿÿÿÿ
+a
+java:S1124Ğ"EReorder the modifiers to comply with the Java Language Specification.(‚‹½‡ÿÿÿÿÿ
+a
+java:S1124Ñ"EReorder the modifiers to comply with the Java Language Specification.(›»´¬ÿÿÿÿÿ
+a
+java:S1124Ò"EReorder the modifiers to comply with the Java Language Specification.(¹°¯Îùÿÿÿÿ
+a
+java:S1124Ó"EReorder the modifiers to comply with the Java Language Specification.(‚û½‚úÿÿÿÿ
+a
+java:S1124Ô"EReorder the modifiers to comply with the Java Language Specification.(²É¼¢ùÿÿÿÿ
+a
+java:S1124Ö"EReorder the modifiers to comply with the Java Language Specification.(«Œ’îşÿÿÿÿ
+\
+java:S1124×"EReorder the modifiers to comply with the Java Language Specification.(–ÓÈ
+a
+java:S1124Ø"EReorder the modifiers to comply with the Java Language Specification.(êóŒäşÿÿÿÿ
+\
+java:S1124Ù"EReorder the modifiers to comply with the Java Language Specification.(ºıÑ²
+c	java:S100â"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ò™ëg
+i	java:S100ã"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ŸÖÂ€ùÿÿÿÿ
+i	java:S100ç"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ü˜ğÖÿÿÿÿÿ
+i	java:S100ë"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¹ÈË¨úÿÿÿÿ
+d	java:S100ì"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(’Ÿîš
+C
+java:S1197ñ",Move the array designators [][] to the type.(ç›¸Ä
+\
+java:S1124ñ"EReorder the modifiers to comply with the Java Language Specification.(ç›¸Ä
+C
+java:S1197ù",Move the array designators [][] to the type.(ø€¨£
+\
+java:S1124ù"EReorder the modifiers to comply with the Java Language Specification.(ø€¨£
+H
+java:S1197",Move the array designators [][] to the type.(‘›©„şÿÿÿÿ
+a
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.(‘›©„şÿÿÿÿ
+C
+java:S1197‡",Move the array designators [][] to the type.(€èÈ
+\
+java:S1124‡"EReorder the modifiers to comply with the Java Language Specification.(€èÈ
+\
+java:S1124Œ"EReorder the modifiers to comply with the Java Language Specification.(Ñ¶Ç
+a
+java:S1124”"EReorder the modifiers to comply with the Java Language Specification.(ïª¼şÿÿÿÿ
+\
+java:S1124˜"EReorder the modifiers to comply with the Java Language Specification.(éõì³
+a
+java:S1124œ"EReorder the modifiers to comply with the Java Language Specification.(˜İÁ¶üÿÿÿÿ
+h
+java:S1124 "EReorder the modifiers to comply with the Java Language Specification.(îñ±¡ûÿÿÿÿ8Ùí‘áô0
