@@ -1,11 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:kakao_flutter_sdk/kakao_flutter_sdk.dart';
 import 'package:provider/provider.dart';
+import 'package:smooth_page_indicator/smooth_page_indicator.dart';
+import 'package:whatever/controller/onboarding_controller.dart';
 import 'package:whatever/screens/onboarding_screen1.dart';
 import 'package:whatever/screens/onboarding_screen2.dart';
 import 'package:whatever/screens/onboarding_screen3.dart';
-import 'controller/onboarding_controller.dart';
+import 'package:whatever/screens/sample_widget_view_page.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  KakaoSdk.init(nativeAppKey: '5b010a19c827b00762c3f27de5198e36');
   runApp(
     ChangeNotifierProvider(
       create: (context) => OnboardingController(),
@@ -62,9 +67,10 @@ class _AuthCheckState extends State<AuthCheck> {
 
   @override
   Widget build(BuildContext context) {
-    return _isAuthorized
-        ? const MyHomePage(title: 'Flutter Demo Home Page')
-        : const OnboardingPage();
+    return const SampleWidgetViewTestPage();
+    // _isAuthorized
+    // ? const MyHomePage(title: 'Flutter Demo Home Page')
+    // : const OnboardingPage();
   }
 }
 
@@ -92,43 +98,30 @@ class _OnboardingPageState extends State<OnboardingPage> {
       appBar: AppBar(
         title: const Text('Onboarding'),
       ),
-      body: PageView(
-        controller: _pageController,
-        onPageChanged: (index) {
-          onboardingController.goToPage(index);
-        },
-        children: const [
-          OnboardingScreen1(),
-          OnboardingScreen2(),
-          OnboardingScreen3(),
+      body: Column(
+        children: [
+          Expanded(
+            child: PageView(
+              controller: _pageController,
+              onPageChanged: (index) {
+                onboardingController.goToPage(index);
+              },
+              children: const [
+                OnboardingScreen1(),
+                OnboardingScreen2(),
+                OnboardingScreen3(),
+              ],
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.only(bottom: 24.0),
+            child: SmoothPageIndicator(
+              controller: _pageController,
+              count: 3,
+              effect: const WormEffect(),
+            ),
+          ),
         ],
-      ),
-      bottomNavigationBar: Consumer<OnboardingController>(
-        builder: (context, onboardingController, child) => Row(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
-          children: [
-            IconButton(
-              icon: const Icon(Icons.arrow_back),
-              onPressed: onboardingController.currentPage > 0
-                  ? () => _pageController.previousPage(
-                        duration: const Duration(milliseconds: 300),
-                        curve: Curves.easeInOut,
-                      )
-                  : null,
-              disabledColor: Colors.grey,
-            ),
-            IconButton(
-              icon: const Icon(Icons.arrow_forward),
-              onPressed: onboardingController.currentPage < 2
-                  ? () => _pageController.nextPage(
-                        duration: const Duration(milliseconds: 300),
-                        curve: Curves.easeInOut,
-                      )
-                  : null,
-              disabledColor: Colors.grey,
-            ),
-          ],
-        ),
       ),
     );
   }

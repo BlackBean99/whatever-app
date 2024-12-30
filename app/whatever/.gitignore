@@ -154,3 +154,4 @@ app.*.symbols
 #external packages and font
 ./fonts
 ./fonts/*
+ios/web

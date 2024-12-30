@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:whatever/utils/app_text_styles.dart';
 import 'package:whatever/utils/content_spacing.dart';
 
 class OnboardingScreen1 extends StatelessWidget {
@@ -6,10 +7,13 @@ class OnboardingScreen1 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Padding(
-      padding: EdgeInsets.symmetric(horizontal: ContentSpacing.spacing2),
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: ContentSpacing.spacing2),
       child: Center(
-        child: Text('Onboarding Screen 1: Please Authorize'),
+        child: Text(
+          'Onboarding Screen 1: Please Authorize',
+          style: AppTextStyles.englishBody1,
+        ),
       ),
     );
   }
