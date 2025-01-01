@@ -23,7 +23,23 @@ class _SampleWidgetViewPageState extends State<SampleWidgetViewPage> {
             IconButton(
               icon: const Icon(Icons.menu),
               onPressed: () {
-                // Handle menu button press
+                showGeneralDialog(
+                  context: context,
+                  barrierDismissible: true,
+                  barrierLabel: '',
+                  transitionDuration: const Duration(milliseconds: 300),
+                  pageBuilder: (context, animation, secondaryAnimation) {
+                    return SlideTransition(
+                      position: Tween<Offset>(
+                        begin: const Offset(-1.0, 0.0),
+                        end: Offset.zero,
+                      ).animate(animation),
+                      child: const Material(
+                        child: menu_page(),
+                      ),
+                    );
+                  },
+                );
               },
             ),
             const SizedBox(width: 5),
@@ -42,36 +58,7 @@ class _SampleWidgetViewPageState extends State<SampleWidgetViewPage> {
                         begin: const Offset(1.0, 0.0),
                         end: Offset.zero,
                       ).animate(animation),
-                      child: Material(
-                        child: Container(
-                          width: MediaQuery.of(context).size.width * 0.85,
-                          color: Theme.of(context).scaffoldBackgroundColor,
-                          child: SafeArea(
-                            child: Column(
-                              children: [
-                                AppBar(
-                                  title: const Text('Notifications'),
-                                  leading: IconButton(
-                                    icon: const Icon(Icons.arrow_back),
-                                    onPressed: () => Navigator.pop(context),
-                                  ),
-                                ),
-                                Expanded(
-                                  child: ListView.builder(
-                                    itemCount: 10,
-                                    itemBuilder: (context, index) {
-                                      return ListTile(
-                                        title:
-                                            Text('Notification ${index + 1}'),
-                                      );
-                                    },
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ),
-                      ),
+                      child: const notification_screen(),
                     );
                   },
                 );
@@ -134,6 +121,90 @@ class _SampleWidgetViewPageState extends State<SampleWidgetViewPage> {
         const SizedBox(height: 16),
         content,
       ],
+    );
+  }
+}
+
+class notification_screen extends StatelessWidget {
+  const notification_screen({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Material(
+      child: Container(
+        width: MediaQuery.of(context).size.width * 0.85,
+        color: Theme.of(context).scaffoldBackgroundColor,
+        child: SafeArea(
+          child: Column(
+            children: [
+              AppBar(
+                title: const Text('Notifications'),
+                leading: IconButton(
+                  icon: const Icon(Icons.arrow_back),
+                  onPressed: () => Navigator.pop(context),
+                ),
+              ),
+              Expanded(
+                child: ListView.builder(
+                  itemCount: 10,
+                  itemBuilder: (context, index) {
+                    return ListTile(
+                      title: Text('Notification ${index + 1}'),
+                    );
+                  },
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class menu_page extends StatelessWidget {
+  const menu_page({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: MediaQuery.of(context).size.width * 0.85,
+      color: Theme.of(context).scaffoldBackgroundColor,
+      child: SafeArea(
+        child: Column(
+          children: [
+            AppBar(
+              title: const Text('Menu'),
+              leading: IconButton(
+                icon: const Icon(Icons.arrow_back),
+                onPressed: () => Navigator.pop(context),
+              ),
+            ),
+            Expanded(
+              child: ListView(
+                children: const [
+                  ListTile(
+                    leading: Icon(Icons.home),
+                    title: Text('Home'),
+                  ),
+                  ListTile(
+                    leading: Icon(Icons.settings),
+                    title: Text('Settings'),
+                  ),
+                  ListTile(
+                    leading: Icon(Icons.help),
+                    title: Text('Help'),
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
