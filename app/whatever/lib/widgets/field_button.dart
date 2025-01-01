@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:whatever/utils/app_radius.dart';
 
 class FieldButton extends StatelessWidget {
   final String text;
@@ -17,6 +18,11 @@ class FieldButton extends StatelessWidget {
       width: double.infinity,
       child: ElevatedButton(
         onPressed: onPressed,
+        style: ElevatedButton.styleFrom(
+          shape: RoundedRectangleBorder(
+            borderRadius: AppRadius.circular16,
+          ),
+        ),
         child: Text(text),
       ),
     );

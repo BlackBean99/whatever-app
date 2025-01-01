@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:whatever/utils/app_text_styles.dart';
 import 'package:whatever/utils/content_spacing.dart';
 import 'package:whatever/widgets/line_button.dart';
+import 'package:whatever/widgets/custom_toggle_switch.dart';
 
 class SampleWidgetViewTestPage extends StatelessWidget {
   const SampleWidgetViewTestPage({super.key});
@@ -29,21 +30,26 @@ class SampleWidgetViewTestPage extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Container(
-                    height: ContentSpacing.spacing4,
+                    height: ContentSpacing.spacing1,
                     color: Colors.blue.withOpacity(0.3),
                     width: double.infinity,
                     child: const Center(child: Text('Spacing 4')),
                   ),
+                  const Padding(
+                    padding: EdgeInsets.only(top: ContentSpacing.spacing1),
+                  ),
                   const SizedBox(height: ContentSpacing.spacing1),
                   Container(
-                    height: ContentSpacing.spacing4,
+                    height: ContentSpacing.spacing2,
                     color: Colors.blue.withOpacity(0.3),
                     width: double.infinity,
                     child: const Center(child: Text('Spacing 8')),
                   ),
-                  const SizedBox(height: ContentSpacing.spacing6),
+                  const Padding(
+                    padding: EdgeInsets.only(top: ContentSpacing.spacing1),
+                  ),
                   Container(
-                    height: ContentSpacing.spacing4,
+                    height: ContentSpacing.spacing3,
                     color: Colors.blue.withOpacity(0.3),
                     width: double.infinity,
                     child: const Center(child: Text('Spacing 16')),
@@ -54,8 +60,17 @@ class SampleWidgetViewTestPage extends StatelessWidget {
 
             Padding(
               padding: const EdgeInsets.all(16.0),
-              child: Text('Text Caption Style',
-                  style: AppTextStyles.englishCaption1),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text('English Headline 1',
+                      style: AppTextStyles.englishHeadline1),
+                  Text('English Headline 2',
+                      style: AppTextStyles.englishHeadline2),
+                  Text('English Headline 3',
+                      style: AppTextStyles.englishHeadline3),
+                ],
+              ),
             ),
             // Text Style Examples
             Padding(
@@ -81,27 +96,96 @@ class SampleWidgetViewTestPage extends StatelessWidget {
             ),
             // Custom Button Examples
             SizedBox(
-              height: 100,
+              height: 50,
               child: ListView(
                 scrollDirection: Axis.horizontal,
                 padding: const EdgeInsets.symmetric(horizontal: 16.0),
                 children: [
                   LineButton(
                     onPressed: () {},
-                    width: 100,
+                    isDisabled: false,
+                    width: 200,
                     text: 'Primary Button',
                   ),
-                  const SizedBox(width: 16),
-                  const LineButton.large(text: "Large Button"),
-                  const LineButton.medium(text: "medium"),
-                  const LineButton.small(text: "small"),
-                  const LineButton.largeDisabled(text: "Large Disabled"),
-                  const LineButton.mediumDisabled(text: "medium Disabled"),
-                  const LineButton.smallDisabled(text: "small Disabled"),
+                  LineButton(
+                    onPressed: () {},
+                    isDisabled: true,
+                    width: 200,
+                    text: 'Primary Button Disabled',
+                  ),
                 ],
               ),
             ),
-            const SizedBox(height: 32),
+            const SizedBox(height: 16),
+            SizedBox(
+              height: 50,
+              child: ListView(
+                scrollDirection: Axis.horizontal,
+                padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                children: [
+                  LineButton.large(
+                      onPressed: () {}, width: 200, text: "Large Button"),
+                  const LineButton.largeDisabled(text: "Large Button Disabled"),
+                ],
+              ),
+            ),
+            const SizedBox(height: 16),
+            SizedBox(
+              height: 50,
+              child: ListView(
+                scrollDirection: Axis.horizontal,
+                padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                children: const [
+                  LineButton.medium(text: "medium"),
+                  LineButton.mediumDisabled(text: "medium Disabled"),
+                ],
+              ),
+            ),
+            SizedBox(
+              height: 50,
+              child: ListView(
+                scrollDirection: Axis.horizontal,
+                padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                children: const [
+                  LineButton.small(text: "small"),
+                  LineButton.smallDisabled(text: "small Disabled"),
+                ],
+              ),
+            ),
+            const SizedBox(height: 16),
+            SizedBox(
+              height: 50,
+              child: ListView(
+                scrollDirection: Axis.horizontal,
+                padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                children: const [
+                  LineButton.xLarge(text: "xLarge Button"),
+                  LineButton.xLargeDisabled(text: "xLarge Button Disabled"),
+                ],
+              ),
+            ),
+            const SizedBox(height: 16),
+            SizedBox(
+              height: 32,
+              child: ListView(
+                scrollDirection: Axis.horizontal,
+                padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                children: [
+                  StatefulBuilder(builder: (context, setState) {
+                    return CustomToggleSwitch(
+                      value: false,
+                      onChanged: (value) {
+                        setState(() {
+                          value = !value;
+                        });
+                      },
+                    );
+                  }),
+                ],
+              ),
+            ),
+            // margin
+            const SizedBox(height: 40),
           ],
         ),
       ),
