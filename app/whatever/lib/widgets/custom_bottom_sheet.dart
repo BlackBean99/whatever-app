@@ -41,7 +41,8 @@ class CustomBottomSheet extends StatelessWidget {
       shape: RoundedRectangleBorder(
         borderRadius: AppRadius.circular20,
       ),
-      builder: (context) => _buildContent('Modal Bottom Sheet'),
+      builder: (context) =>
+          _buildContent('Modal Bottom Sheet all of them full side'),
     );
   }
 
@@ -76,13 +77,14 @@ class CustomBottomSheet extends StatelessWidget {
 
   void _showFullscreenSheet() {
     showModalBottomSheet(
-      context: context,
-      isScrollControlled: true,
-      builder: (context) => SizedBox(
-        height: MediaQuery.of(context).size.height,
-        child: _buildContent('Fullscreen Bottom Sheet'),
-      ),
-    );
+        context: context,
+        isScrollControlled: true,
+        builder: (context) {
+          return FractionallySizedBox(
+            heightFactor: 0.9,
+            child: Container(),
+          );
+        });
   }
 
   void _showAdaptiveSheet() {
