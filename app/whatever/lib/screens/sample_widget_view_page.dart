@@ -1,194 +1,77 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:whatever/utils/app_text_styles.dart';
-import 'package:whatever/utils/content_spacing.dart';
-import 'package:whatever/widgets/line_button.dart';
+import 'package:whatever/utils/bottom_sheet_options.dart';
+import 'package:whatever/widgets/custom_bottom_sheet.dart';
 import 'package:whatever/widgets/custom_toggle_switch.dart';
 
-class SampleWidgetViewTestPage extends StatelessWidget {
-  const SampleWidgetViewTestPage({super.key});
+class SampleWidgetViewPage extends StatefulWidget {
+  const SampleWidgetViewPage({super.key});
+
+  @override
+  State<SampleWidgetViewPage> createState() => _SampleWidgetViewPageState();
+}
+
+class _SampleWidgetViewPageState extends State<SampleWidgetViewPage> {
+  bool _toggleValue = false;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Widget Test Page'),
+        title: const Text('Widget Samples'),
       ),
-      body: SingleChildScrollView(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Padding(
-              padding: const EdgeInsets.all(16.0),
-              child: Text('Content Spacing Examples',
-                  style: AppTextStyles.englishBody1),
+      body: ListView(
+        padding: const EdgeInsets.all(16),
+        children: [
+          _buildSection(
+            'Toggle Switch',
+            CustomToggleSwitch(
+              value: _toggleValue,
+              onChanged: (value) {
+                setState(() {
+                  _toggleValue = value;
+                });
+              },
             ),
-            // Content Spacing Examples
-            Container(
-              padding: const EdgeInsets.all(16.0),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Container(
-                    height: ContentSpacing.spacing1,
-                    color: Colors.blue.withOpacity(0.3),
-                    width: double.infinity,
-                    child: const Center(child: Text('Spacing 4')),
+          ),
+          const SizedBox(height: 24),
+          _buildSection(
+            'Bottom Sheets',
+            Column(
+              children: BottomSheetType.values.map((type) {
+                return Padding(
+                  padding: const EdgeInsets.only(bottom: 8),
+                  child: ElevatedButton(
+                    onPressed: () {
+                      CustomBottomSheet(
+                        type: type,
+                        context: context,
+                      ).show();
+                    },
+                    child: Text('Show ${type.displayName}'),
                   ),
-                  const Padding(
-                    padding: EdgeInsets.only(top: ContentSpacing.spacing1),
-                  ),
-                  const SizedBox(height: ContentSpacing.spacing1),
-                  Container(
-                    height: ContentSpacing.spacing2,
-                    color: Colors.blue.withOpacity(0.3),
-                    width: double.infinity,
-                    child: const Center(child: Text('Spacing 8')),
-                  ),
-                  const Padding(
-                    padding: EdgeInsets.only(top: ContentSpacing.spacing1),
-                  ),
-                  Container(
-                    height: ContentSpacing.spacing3,
-                    color: Colors.blue.withOpacity(0.3),
-                    width: double.infinity,
-                    child: const Center(child: Text('Spacing 16')),
-                  ),
-                ],
-              ),
+                );
+              }).toList(),
             ),
+          ),
+        ],
+      ),
+    );
+  }
 
-            Padding(
-              padding: const EdgeInsets.all(16.0),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text('English Headline 1',
-                      style: AppTextStyles.englishHeadline1),
-                  Text('English Headline 2',
-                      style: AppTextStyles.englishHeadline2),
-                  Text('English Headline 3',
-                      style: AppTextStyles.englishHeadline3),
-                ],
-              ),
-            ),
-            // Text Style Examples
-            Padding(
-              padding: const EdgeInsets.all(16.0),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text('english body1', style: AppTextStyles.englishBody1),
-                  const SizedBox(height: 8),
-                  Text('english body2', style: AppTextStyles.englishBody2),
-                  const SizedBox(height: 8),
-                  Text('english body3', style: AppTextStyles.englishBody3),
-                  const SizedBox(height: 8),
-                  Text('english button1', style: AppTextStyles.englishButton1),
-                ],
-              ),
-            ),
-
-            Padding(
-              padding: const EdgeInsets.all(16.0),
-              child:
-                  Text('Custom Buttons', style: AppTextStyles.englishHeadline1),
-            ),
-            // Custom Button Examples
-            SizedBox(
-              height: 50,
-              child: ListView(
-                scrollDirection: Axis.horizontal,
-                padding: const EdgeInsets.symmetric(horizontal: 16.0),
-                children: [
-                  LineButton(
-                    onPressed: () {},
-                    isDisabled: false,
-                    width: 200,
-                    text: 'Primary Button',
-                  ),
-                  LineButton(
-                    onPressed: () {},
-                    isDisabled: true,
-                    width: 200,
-                    text: 'Primary Button Disabled',
-                  ),
-                ],
-              ),
-            ),
-            const SizedBox(height: 16),
-            SizedBox(
-              height: 50,
-              child: ListView(
-                scrollDirection: Axis.horizontal,
-                padding: const EdgeInsets.symmetric(horizontal: 16.0),
-                children: [
-                  LineButton.large(
-                      onPressed: () {}, width: 200, text: "Large Button"),
-                  const LineButton.largeDisabled(text: "Large Button Disabled"),
-                ],
-              ),
-            ),
-            const SizedBox(height: 16),
-            SizedBox(
-              height: 50,
-              child: ListView(
-                scrollDirection: Axis.horizontal,
-                padding: const EdgeInsets.symmetric(horizontal: 16.0),
-                children: const [
-                  LineButton.medium(text: "medium"),
-                  LineButton.mediumDisabled(text: "medium Disabled"),
-                ],
-              ),
-            ),
-            SizedBox(
-              height: 50,
-              child: ListView(
-                scrollDirection: Axis.horizontal,
-                padding: const EdgeInsets.symmetric(horizontal: 16.0),
-                children: const [
-                  LineButton.small(text: "small"),
-                  LineButton.smallDisabled(text: "small Disabled"),
-                ],
-              ),
-            ),
-            const SizedBox(height: 16),
-            SizedBox(
-              height: 50,
-              child: ListView(
-                scrollDirection: Axis.horizontal,
-                padding: const EdgeInsets.symmetric(horizontal: 16.0),
-                children: const [
-                  LineButton.xLarge(text: "xLarge Button"),
-                  LineButton.xLargeDisabled(text: "xLarge Button Disabled"),
-                ],
-              ),
-            ),
-            const SizedBox(height: 16),
-            SizedBox(
-              height: 32,
-              child: ListView(
-                scrollDirection: Axis.horizontal,
-                padding: const EdgeInsets.symmetric(horizontal: 16.0),
-                children: [
-                  StatefulBuilder(builder: (context, setState) {
-                    return CustomToggleSwitch(
-                      value: false,
-                      onChanged: (value) {
-                        setState(() {
-                          value = !value;
-                        });
-                      },
-                    );
-                  }),
-                ],
-              ),
-            ),
-            // margin
-            const SizedBox(height: 40),
-          ],
+  Widget _buildSection(String title, Widget content) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(
+          title,
+          style: const TextStyle(
+            fontSize: 18,
+            fontWeight: FontWeight.bold,
+          ),
         ),
-      ),
+        const SizedBox(height: 16),
+        content,
+      ],
     );
   }
 }

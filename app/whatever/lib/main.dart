@@ -67,7 +67,7 @@ class _AuthCheckState extends State<AuthCheck> {
 
   @override
   Widget build(BuildContext context) {
-    return const SampleWidgetViewTestPage();
+    return const SampleWidgetViewPage();
     // _isAuthorized
     // ? const MyHomePage(title: 'Flutter Demo Home Page')
     // : const OnboardingPage();
