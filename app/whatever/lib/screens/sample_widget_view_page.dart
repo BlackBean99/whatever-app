@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:whatever/screens/notification_page.dart';
 import 'package:whatever/utils/bottom_sheet_options.dart';
 import 'package:whatever/widgets/custom_bottom_sheet.dart';
 import 'package:whatever/widgets/custom_toggle_switch.dart';
+import 'package:whatever/widgets/custom_bottom_bar.dart';
+import 'package:whatever/widgets/menu_page.dart';
 
 class SampleWidgetViewPage extends StatefulWidget {
   const SampleWidgetViewPage({super.key});
@@ -12,6 +15,7 @@ class SampleWidgetViewPage extends StatefulWidget {
 
 class _SampleWidgetViewPageState extends State<SampleWidgetViewPage> {
   bool _toggleValue = false;
+  int _currentIndex = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -23,23 +27,7 @@ class _SampleWidgetViewPageState extends State<SampleWidgetViewPage> {
             IconButton(
               icon: const Icon(Icons.menu),
               onPressed: () {
-                showGeneralDialog(
-                  context: context,
-                  barrierDismissible: true,
-                  barrierLabel: '',
-                  transitionDuration: const Duration(milliseconds: 300),
-                  pageBuilder: (context, animation, secondaryAnimation) {
-                    return SlideTransition(
-                      position: Tween<Offset>(
-                        begin: const Offset(-1.0, 0.0),
-                        end: Offset.zero,
-                      ).animate(animation),
-                      child: const Material(
-                        child: menu_page(),
-                      ),
-                    );
-                  },
-                );
+                showMenuPage(context);
               },
             ),
             const SizedBox(width: 5),
@@ -47,21 +35,7 @@ class _SampleWidgetViewPageState extends State<SampleWidgetViewPage> {
             const Spacer(),
             IconButton(
               onPressed: () {
-                showGeneralDialog(
-                  context: context,
-                  barrierDismissible: true,
-                  barrierLabel: '',
-                  transitionDuration: const Duration(milliseconds: 300),
-                  pageBuilder: (context, animation, secondaryAnimation) {
-                    return SlideTransition(
-                      position: Tween<Offset>(
-                        begin: const Offset(1.0, 0.0),
-                        end: Offset.zero,
-                      ).animate(animation),
-                      child: const notification_screen(),
-                    );
-                  },
-                );
+                showNotificationPage(context);
               },
               icon: const Icon(Icons.notifications),
             ),
@@ -83,27 +57,77 @@ class _SampleWidgetViewPageState extends State<SampleWidgetViewPage> {
             ),
           ),
           const SizedBox(height: 24),
-          _buildSection(
-            'Bottom Sheets',
-            Column(
-              children: BottomSheetType.values.map((type) {
-                return Padding(
-                  padding: const EdgeInsets.only(bottom: 8),
-                  child: ElevatedButton(
-                    onPressed: () {
-                      CustomBottomSheet(
-                        type: type,
-                        context: context,
-                      ).show();
-                    },
-                    child: Text('Show ${type.displayName}'),
-                  ),
-                );
-              }).toList(),
-            ),
-          ),
+          buildBottomSheets(context),
         ],
       ),
+      bottomNavigationBar: CustomBottomBar(
+        currentIndex: _currentIndex,
+        onTap: (index) {
+          setState(() {
+            _currentIndex = index;
+          });
+        },
+      ),
+    );
+  }
+
+  Widget buildBottomSheets(BuildContext context) {
+    return _buildSection(
+      'Bottom Sheets',
+      Column(
+        children: BottomSheetType.values.map((type) {
+          return Padding(
+            padding: const EdgeInsets.only(bottom: 8),
+            child: ElevatedButton(
+              onPressed: () {
+                CustomBottomSheet(
+                  type: type,
+                  context: context,
+                ).show();
+              },
+              child: Text('Show ${type.displayName}'),
+            ),
+          );
+        }).toList(),
+      ),
+    );
+  }
+
+  Future<Object?> showMenuPage(BuildContext context) {
+    return showGeneralDialog(
+      context: context,
+      barrierDismissible: true,
+      barrierLabel: '',
+      transitionDuration: const Duration(milliseconds: 300),
+      pageBuilder: (context, animation, secondaryAnimation) {
+        return SlideTransition(
+          position: Tween<Offset>(
+            begin: const Offset(-1.0, 0.0),
+            end: Offset.zero,
+          ).animate(animation),
+          child: const Material(
+            child: MenuPage(),
+          ),
+        );
+      },
+    );
+  }
+
+  Future<Object?> showNotificationPage(BuildContext context) {
+    return showGeneralDialog(
+      context: context,
+      barrierDismissible: true,
+      barrierLabel: '',
+      transitionDuration: const Duration(milliseconds: 300),
+      pageBuilder: (context, animation, secondaryAnimation) {
+        return SlideTransition(
+          position: Tween<Offset>(
+            begin: const Offset(1.0, 0.0),
+            end: Offset.zero,
+          ).animate(animation),
+          child: const NotificationPage(),
+        );
+      },
     );
   }
 
@@ -121,90 +145,6 @@ class _SampleWidgetViewPageState extends State<SampleWidgetViewPage> {
         const SizedBox(height: 16),
         content,
       ],
-    );
-  }
-}
-
-class notification_screen extends StatelessWidget {
-  const notification_screen({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Material(
-      child: Container(
-        width: MediaQuery.of(context).size.width * 0.85,
-        color: Theme.of(context).scaffoldBackgroundColor,
-        child: SafeArea(
-          child: Column(
-            children: [
-              AppBar(
-                title: const Text('Notifications'),
-                leading: IconButton(
-                  icon: const Icon(Icons.arrow_back),
-                  onPressed: () => Navigator.pop(context),
-                ),
-              ),
-              Expanded(
-                child: ListView.builder(
-                  itemCount: 10,
-                  itemBuilder: (context, index) {
-                    return ListTile(
-                      title: Text('Notification ${index + 1}'),
-                    );
-                  },
-                ),
-              ),
-            ],
-          ),
-        ),
-      ),
-    );
-  }
-}
-
-class menu_page extends StatelessWidget {
-  const menu_page({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      width: MediaQuery.of(context).size.width * 0.85,
-      color: Theme.of(context).scaffoldBackgroundColor,
-      child: SafeArea(
-        child: Column(
-          children: [
-            AppBar(
-              title: const Text('Menu'),
-              leading: IconButton(
-                icon: const Icon(Icons.arrow_back),
-                onPressed: () => Navigator.pop(context),
-              ),
-            ),
-            Expanded(
-              child: ListView(
-                children: const [
-                  ListTile(
-                    leading: Icon(Icons.home),
-                    title: Text('Home'),
-                  ),
-                  ListTile(
-                    leading: Icon(Icons.settings),
-                    title: Text('Settings'),
-                  ),
-                  ListTile(
-                    leading: Icon(Icons.help),
-                    title: Text('Help'),
-                  ),
-                ],
-              ),
-            ),
-          ],
-        ),
-      ),
     );
   }
 }
